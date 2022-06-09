@@ -168,7 +168,7 @@ public class ConsultaController {
 	
 	@GetMapping(value = "/listarResumen")
 	public ResponseEntity<List<ConsultaResumenDTO>> listarResumen() {
-		List<ConsultaResumenDTO> consultas = new ArrayList<>();
+		List<ConsultaResumenDTO> consultas = new ArrayList<ConsultaResumenDTO>();
 		consultas = service.listarResumen();
 		return new ResponseEntity<>(consultas, HttpStatus.OK);
 	}
